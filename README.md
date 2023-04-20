@@ -2,5 +2,5 @@
 
 ------
 
-### [Chap 1. Cors](https://github.com/keepbang/spring-security-oauth2/tree/chap1.cors)
-### [Chap 2. OAuth 2.0](https://github.com/keepbang/spring-security-oauth2/tree/chap2.oauth2.0)
+### [Chap 1. Cors](https://github.com/keepbang/spring-security-oauth2/blob/main/chap1.md)
+### [Chap 2. OAuth 2.0](https://github.com/keepbang/spring-security-oauth2/blob/main/chap2.md)
