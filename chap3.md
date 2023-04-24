@@ -49,3 +49,32 @@
   #### state
   - 클라이언트가 인가서버에 요청을 보낼 때 임의의 문자열을 포함시켜 보내주고 승인 후 서버로부터 동일한 값이 반환되는지 확인해야 한다.
   - CSRF 공격을 방지하는데 사용된다.(위조 방지)
+
+
+
+## 권한 부여 방식별 설명
+
+-----
+
+### Authorization Code Grant Type
+1. 흐름 및 특징
+   - 사용자가 애플리케이션을 승인하면 인가서버는 redirect URI로 임시 코드(`권한부여코드`)를 담아서 애플리케이션으로 다시 리다이렉션 한다.(1단계)
+   - 애플리케이션은 해당 임시 코드를 인가서버로 전달하고 `액세스 토큰`으로 교환한다.(2단계)
+   - 애플리케이션이 액세스 토큰을 요청할 때 해당 요청을 클라이언트 암호로 인증한다.
+   - 액세스 토큰이 사용자 또는 브라우저에 표시되지 않고 애플리케이션에 다시 전달하는 가장 안전한 방법
+2. 권한부여 코드 요청시 매개변수
+   - response_type=code <font color="red">***(필수)***</font>
+   - client_id <font color="red">***(필수)***</font>
+   - redirect_uri
+   - scope
+   - state
+3. 액세스 토큰 교환 요청 시 매개변수
+   - grant_type=authorization_code <font color="red">***(필수)***</font>
+   - code <font color="red">***(필수)***</font>
+   - redirect_uri <font color="red">***(필수)***</font> -> redirect_uri가 초기 승인 요청에 포함된 경우
+   - client_id <font color="red">***(필수)***</font>
+   - client_secret <font color="red">***(필수)***</font>
+
+#### 흐름
+1. 인가서버에 code를 요청한다.
+2. 사용자의 승인에 따라 인가서버가 클라이언트에게 코드를 발급한다.
