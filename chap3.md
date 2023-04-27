@@ -77,4 +77,29 @@
 
 #### 흐름
 1. 인가서버에 code를 요청한다.
+![./image/img2.png](./image/img2.png)
 2. 사용자의 승인에 따라 인가서버가 클라이언트에게 코드를 발급한다.
+![./image/img3.png](./image/img3.png)
+3. 클라이언트의 권한 부여가 승인되고 그 결과로 토큰을 획득한다.
+![./image/img4.png](./image/img4.png)
+![./image/img.png](./image/img5.png)
+
+-----
+
+### Client Credentials Grant Type
+1. 흐름 및 특징
+   - 어플리케이션이 리소스 소유자인 동시에 클라이언트 역할을 한다.
+   - 리소스 소유자에게 권한을 위임받아 리소스에 접근하는 것이 아니라 자기 자신이 어플리케이션을 사용할 목적으로 사용하는 것.
+   - 서버 to 서버 통신에 사용함, IOT 와 같은 장비 어플리케이션과의 통신을 위한 인증으로도 사용 가능
+   - client id와 client secret 을 통해 액세스 토큰을 바로 발급 받을수 있기 때문에 Refresh Token 을 제공하지 않는다.
+   - client 정보를 기반으로 하기 때문에 사용자 정보를 제공하지 않는다.
+2. 권한부여 코드 요청시 매개변수
+   - grant_type=client_credentials <font color="red">***(필수)***</font>
+   - client_id <font color="red">***(필수)***</font>
+   - client_secret <font color="red">***(필수)***</font>
+   - scope (선택사항)
+
+#### 흐름
+1. 액세스 토큰 요청
+![./image/img6.png](./image/img6.png)
+![./image/img7.png](./image/img7.png)
