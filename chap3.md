@@ -103,3 +103,21 @@
 1. 액세스 토큰 요청
 ![./image/img6.png](./image/img6.png)
 ![./image/img7.png](./image/img7.png)
+
+-----
+
+### Refresh Token Grant
+1. 흐름 및 특징
+   - 액세스 토큰이 발급될 때 함께 제공되는 토큰
+   - 액세스 토큰이 만료되더라도 함께 발급받았던 refresh token이 유효하다면, 인증 과정을 처음부터 반복하지 않아도 액세스 토큰을 재발급 받을수 있다.
+   - 한 번 사용된 refresh token 은 폐기되거나 재사용 할 수 있다.
+2. 권한 부여 승인 요청 시 매개변수
+   - grant_type=refresh_token <font color="red">***(필수)***</font>
+   - refresh_token
+   - client_id <font color="red">***(필수)***</font>
+   - client_secret <font color="red">***(필수)***</font>
+
+#### 흐름
+1. Refresh Token 요청
+![./image/img8.png](./image/img8.png)
+![./image/img9.png](./image/img9.png)
