@@ -121,3 +121,25 @@
 1. Refresh Token 요청
 ![./image/img8.png](./image/img8.png)
 ![./image/img9.png](./image/img9.png)
+
+-----
+
+### PKCE(Proof key for Code Exchange, RFC - 6749)
+- 코드 교환을 위한 증명키로서 CSRF 및 권한부여코드 삽입 공격을 방지하기 위한 Authorization Code Grant Flow 의 확장버전 이다.
+- 추가 매개변수를 추가하여 Authorization Code가 탈취 당했을 때 Access Token 을 발급하지 못하도록 차단한다.
+- 모바일 앱에서 Authorization code 방식을 보호하도록 설계되었으며, 단일 페이지 앱에서도 사용하도록 권장됨.
+
+#### 필요 코드 및 코드 생성
+1. Code Verifier
+   1. 권한부여코드 요청 전에 앱이 원래 생성한 PKCE 요청에 대한 코드검증기
+   2. 48 ~ 128 글자수를 가진 무작위 문자열
+   3. A-Z, a-z, 0-9,-._~ 의 ASCII 문자들로만 구성됨
+2. Code Challenge
+   1. 선택한 Hash 알고리즘으로 Code Verifier를 해싱 한 후 Base64 인코딩을 한 값
+3. Code Challenge Method
+   1. plain - 특정 알고리즘을 사용하지 않도록 설정
+   2. S256 - 해시 알고리즘 사용
+
+#### 흐름
+![./image/img10.png](./image/img10.png)
+![./image/img11.png](./image/img11.png)
