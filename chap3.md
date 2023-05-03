@@ -75,14 +75,14 @@
    - client_id <font color="red">***(필수)***</font>
    - client_secret <font color="red">***(필수)***</font>
 
-#### 흐름
-1. 인가서버에 code를 요청한다.
-![./image/img2.png](./image/img2.png)
-2. 사용자의 승인에 따라 인가서버가 클라이언트에게 코드를 발급한다.
-![./image/img3.png](./image/img3.png)
-3. 클라이언트의 권한 부여가 승인되고 그 결과로 토큰을 획득한다.
-![./image/img4.png](./image/img4.png)
-![./image/img.png](./image/img5.png)
+#### 흐름</br>
+1. 인가서버에 code를 요청한다.</br>
+![./image/img2.png](./image/img2.png)</br>
+2. 사용자의 승인에 따라 인가서버가 클라이언트에게 코드를 발급한다.</br>
+![./image/img3.png](./image/img3.png)</br>
+3. 클라이언트의 권한 부여가 승인되고 그 결과로 토큰을 획득한다.</br>
+![./image/img4.png](./image/img4.png)</br>
+![./image/img.png](./image/img5.png)</br>
 
 -----
 
@@ -99,10 +99,10 @@
    - client_secret <font color="red">***(필수)***</font>
    - scope (선택사항)
 
-#### 흐름
-1. 액세스 토큰 요청
-![./image/img6.png](./image/img6.png)
-![./image/img7.png](./image/img7.png)
+#### 흐름</br>
+1. 액세스 토큰 요청</br>
+![./image/img6.png](./image/img6.png)</br>
+![./image/img7.png](./image/img7.png)</br>
 
 -----
 
@@ -117,10 +117,10 @@
    - client_id <font color="red">***(필수)***</font>
    - client_secret <font color="red">***(필수)***</font>
 
-#### 흐름
-1. Refresh Token 요청
-![./image/img8.png](./image/img8.png)
-![./image/img9.png](./image/img9.png)
+#### 흐름</br>
+1. Refresh Token 요청</br>
+![./image/img8.png](./image/img8.png)</br>
+![./image/img9.png](./image/img9.png)</br>
 
 -----
 
@@ -129,7 +129,7 @@
 - 추가 매개변수를 추가하여 Authorization Code가 탈취 당했을 때 Access Token 을 발급하지 못하도록 차단한다.
 - 모바일 앱에서 Authorization code 방식을 보호하도록 설계되었으며, 단일 페이지 앱에서도 사용하도록 권장됨.
 
-#### 필요 코드 및 코드 생성
+#### 필요 코드 및 코드 생성</br>
 1. Code Verifier
    1. 권한부여코드 요청 전에 앱이 원래 생성한 PKCE 요청에 대한 코드검증기
    2. 48 ~ 128 글자수를 가진 무작위 문자열
@@ -140,6 +140,6 @@
    1. plain - 특정 알고리즘을 사용하지 않도록 설정
    2. S256 - 해시 알고리즘 사용
 
-#### 흐름
-![./image/img10.png](./image/img10.png)
-![./image/img11.png](./image/img11.png)
+#### 흐름</br>
+![./image/img10.png](./image/img10.png)</br>
+![./image/img11.png](./image/img11.png)</br>
