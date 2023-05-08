@@ -1,6 +1,5 @@
 ## Open ID Connect(OIDC)
 
------
 
 - OAuth 2.0 프로토콜 위에 구축된 ID 계층, OAuth 2.0 기반의 인증 프로토콜
 - scope 지정 시 ```openid``` 를 포함하면 Open ID Connect 사용이 가능함

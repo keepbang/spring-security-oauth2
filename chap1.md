@@ -1,6 +1,5 @@
 ## CORS와 SOP
 
----
 
 > CORS(Cross-Origin Resource Sharing). <br/>
 > 교차 출처 자원 공유 <br/>

@@ -1,6 +1,5 @@
 ## Oauth 2.0 Grant Type
 
------
 
 ### 권한 부여 유형
 
@@ -53,8 +52,6 @@
 
 
 ## 권한 부여 방식별 설명
-
------
 
 ### Authorization Code Grant Type
 1. 흐름 및 특징

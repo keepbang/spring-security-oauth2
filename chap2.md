@@ -1,6 +1,5 @@
 # OAuth 2.0 Fundamentals
 
------
 
 1. OAuth = Open + Authorization(인가)
    - 인가 : 권한을 부여한다.
