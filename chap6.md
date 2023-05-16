@@ -47,9 +47,9 @@ spring:
 - `Provider`는 공급자에게 제공하는 엔드포인트 등의 정보를 나타낸다.
 
 ## ClientRegistration
-- OAuth 2.0 또는 OIDC 1.0 Provider 에서 클라이언트의 등록 정보를 나타낸다.
-- OIDC Provider의 설정 엔드포인트나 인가 서버의 메타데이터 엔드포인트를 찾아 초기화 할 수 있다.
-- ClientRegistrations 메서드를 사용하여 설정.
+- `OAuth 2.0` 또는 `OIDC 1.0 Provider` 에서 클라이언트의 등록 정보를 나타낸다.
+- `OIDC Provider`의 설정 엔드포인트나 인가 서버의 메타데이터 엔드포인트를 찾아 초기화 할 수 있다.
+- `ClientRegistrations` 메서드를 사용하여 설정.
   - `ClientRegistration clientRegistration = ClientRegistrations.fromIssuerLocation(“https://idp.example.com/issuer”).build();`
 
 ![img.png](./image/img6_4.png)
@@ -57,8 +57,8 @@ spring:
 
 ### OAuth2Provider
 - 글로벌한 서비스 제공자의 설정을 기본으로 제공한다.
-- Client ID 와 Client Secret은 별도 application.yml에 작성해야한다.
-- yml파일이 아닌 Java Config방식으로도 등록을 할 수 있음
+- `Client ID` 와 `Client Secret`은 별도 `application.yml`에 작성해야한다.
+- `yml`파일이 아닌 `Java Config`방식으로도 등록을 할 수 있음
 - 위에서 제공되지 않는 공급자 정보는 수동으로 설정 해줘야 한다.
 
 ![img.png](./image/img6_3.png)
@@ -68,3 +68,7 @@ spring:
 - `ClientRegistrationRepository`은 `ClientRegistration` 저장소 역할을 한다.
 - 인가 서버에 일차적으로 저장된 클라이언트 등록 정보의 일부를 검색하는 기능을 제공.
 - `ApplicationContext`내 `Bean`으로 등록되서 의존성 주입을통해서 사용 할 수 있다.
+
+
+- 이런식으로 `ClientRegistration` 클래스를 사용하여 `Bean`으로 생성 가능
+![img.png](img6_6.png)
